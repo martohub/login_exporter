@@ -2,11 +2,11 @@
 
 export GOPATH=$HOME/go/  
 cd /root/go/src/github.com
-git clone https://github.com/martohub/login_exporter.git
+git clone "https://github.com/martohub/login_exporter.git"
 cd login_exporter
 go build -o ./login_exporter
 /root/go/src/github.com/login_exporter/login_exporter -config="login.yml" -listen_ip="0.0.0.0" -timeout 60
-curl http://localhost:9980/probe?target=Google&login_type=no_auth
+curl "http://localhost:9980/probe?target=Google&login_type=no_auth"
 login_status{login_type="no_auth",target="Google"} 1
 
 ## Installation

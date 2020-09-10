@@ -55,13 +55,15 @@ type SingleLoginConfig struct {
 func getChromeOptions() agouti.Option {
 	return agouti.ChromeOptions("args", []string{
 		"--headless",
+		"--private",
+		"--no-sandbox",
 		"--disable-gpu",
+		"--disable-dev-shm-usage",
 		"--no-first-run",
 		"--no-default-browser-check",
 		"--allow-insecure-localhost",
 	})
 }
-
 /// getChromeExcludedOptions Returns the excluded options
 func getChromeExcludedOptions() agouti.Option {
 	return agouti.ChromeOptions("excludeSwitches", []string{

@@ -1,50 +1,7 @@
-#targets:
-#  - url: "https://google.com"
-#    target: "Google"
-#    login_type: no_auth
-##    wait: 50000
-##    method: "GET"
-#
-#    expected_text: "Google"
-# http://167.86.89.147:9980/probe?target=https://grafana.thecloudroot.com/login_type=simple
-#login_type
-#target
-#url
-#username
-#password
-#username_xpath
-#password_xpath
-#submit_xpath
-#expected_text
-#//title[@lang]
-
 
 targets:
-  - url: "https://grafana.thecloudroot.com"
-    target: "Grafana"
-    username: "admin"
-    password: "cloudrdc"
-    certificate: ""
-    login_type: simple_form
-    username_xpath: "//input[@id='username']"
-    password_xpath: "//input[@id='password']"
-    submit_xpath: "//input[@name='submit']"
-    certificate_xpath: ""
-    expected_text: "Grafana"
-    expected_text_xpath: ""
-    expected_text_frame: ""
-    ssl_check: no
-    debug: no
-    method: "POST"
-    submit_type: "click"
-    logout_xpath: ""
-    logout_submit_type: "click"
-    logout_frame: ""
-    wait_time: 1000
-
-
-#  - url: "https://google.com"
-#    target: "Google"
-#    login_type: no_auth
-#    wait: 50000
-#    method: "GET"
+  - url: "https://google.com"
+    target: "Google"
+    login_type: no_auth
+    wait: 50000
+    method: "GET"
